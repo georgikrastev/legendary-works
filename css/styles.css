@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 /* Containers */
 body,
 html { 
@@ -139,6 +143,7 @@ body {
 }
 
 .bar__title {
+    font-weight: 400;
     font-size: 16px;
     margin: 0 4px 0 0;
     transition-delay: 1.5s;
@@ -164,4 +169,47 @@ body {
 .loaded .socials__item {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+    .headings {
+        padding: 0 16px;
+    }
+
+    .headings__title {
+        font-size: 32px;
+    }
+
+    .headings__subtitle {
+        font-size: 20px;
+    }
+
+    .socials {
+        left: 16px;
+        top: 16px;
+    }
+
+    .bar {
+        flex-wrap: wrap;
+        padding: 0 16px;
+    }
+
+    .bar__title {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .bar__list {
+        flex: 0 0 240px;
+        max-width: 240px;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 12px;
+    }
+
+    .bar__list-item {
+        margin-bottom: 4px;
+    }
 }
