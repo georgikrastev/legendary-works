@@ -1,13 +1,13 @@
-const body = document.querySelector('body')
-const barListElements = document.querySelectorAll('.bar__list-item')
-const initialDelay = 1500
-const delayInterval = 250
+// Change Theme
+const body = document.querySelector('body');
+const themeSwitch = document.querySelector('.theme-switch');
 
-// Set transition delays
-Array.from(barListElements).map((listElement, index) => {
-    const delayString = `${(initialDelay + (index + 1) * delayInterval).toString()}ms`
-    listElement.style.transitionDelay = delayString
-})
-
-// Set `loaded` class to start animations
-window.addEventListener('load', () => body.classList.add('loaded'))
+themeSwitch.addEventListener('click', () => {
+	if (body.classList.contains('theme-dark')) {
+		body.classList.remove('theme-dark');
+		body.classList.add('theme-light');
+	} else {
+		body.classList.remove('theme-light');
+		body.classList.add('theme-dark');
+	}
+});
