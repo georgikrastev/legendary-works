@@ -148,6 +148,7 @@ h3 {
 	position: absolute;
 	left: 0;
 	top: 0;
+	transition: all .3s;
 }
 
 .card .card__actions {
@@ -356,6 +357,10 @@ h3 {
 		flex-direction: column;
 	}
 
+	.card ~ .card {
+		margin-top: 15px;
+	}
+
 	.card--sm,
 	.card--md-horizontal,
 	.card--md-vertical,
@@ -374,6 +379,10 @@ h3 {
 
 	.card .card__content {
 		margin-bottom: 30px;
+	}
+
+	.card--link:hover .card__actions {
+		transform: none;
 	}
 
 	.card--title {
