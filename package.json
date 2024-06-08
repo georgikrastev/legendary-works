@@ -1,0 +1,14 @@
+{
+  "name": "georgi-krastev-portfolio",
+  "version": "1.0.0",
+  "description": "Personal Portfolio",
+  "scripts": {
+    "start": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Georgi Krastev",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
+  }
+}
